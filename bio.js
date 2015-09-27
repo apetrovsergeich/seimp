@@ -239,7 +239,7 @@ function help(str)
 
 help_div.style.display="block";
 help_div.innerHTML=help_txt[str];
-help_div.innerHTML+="<br><div align=right><a href='javascript:hidehelp()' class='menu_item'>Скрыть помощь</a></div>";
+help_div.innerHTML+="<br><div align=right><a href='javascript:hidehelp()' class='menu_item'>РЎРєСЂС‹С‚СЊ РїРѕРјРѕС‰СЊ</a></div>";
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -249,12 +249,12 @@ function show_graph()
 
 graph_div.style.display="block";
 tooglgr=document.getElementById('#tooglgr');
-tooglgr.innerHTML='<a href="javascript:hide_graph();" class="menu_item">Скрыть график</a>';
+tooglgr.innerHTML='<a href="javascript:hide_graph();" class="menu_item">РЎРєСЂС‹С‚СЊ РіСЂР°С„РёРє</a>';
 }
 function hide_graph()
 {graph_div.style.display="none";
 tooglgr=document.getElementById('#tooglgr');
-tooglgr.innerHTML='<a href="javascript:show_graph();" class="menu_item">Показать график</a>';
+tooglgr.innerHTML='<a href="javascript:show_graph();" class="menu_item">РџРѕРєР°Р·Р°С‚СЊ РіСЂР°С„РёРє</a>';
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -277,57 +277,57 @@ function redraw_tr()
 {
 
 if (!u1){
-upgrade_div.innerHTML="<b>Требуется: ";
+upgrade_div.innerHTML="<b>РўСЂРµР±СѓРµС‚СЃСЏ: ";
 if (ressource['matan']>= (bioreactor_level+1)*50)
-{upgrade_div.innerHTML+="<span class=\"ok\">"+(bioreactor_level+1)*50+"K строк кода, </span>"; upgrade_butt.disabled=false;}
+{upgrade_div.innerHTML+="<span class=\"ok\">"+(bioreactor_level+1)*50+"K СЃС‚СЂРѕРє РєРѕРґР°, </span>"; upgrade_butt.disabled=false;}
 else
-{upgrade_div.innerHTML+="<span class=\"failed\">"+(bioreactor_level+1)*50+"К строк кода, </span>"; upgrade_butt.disabled=true;}
+{upgrade_div.innerHTML+="<span class=\"failed\">"+(bioreactor_level+1)*50+"Рљ СЃС‚СЂРѕРє РєРѕРґР°, </span>"; upgrade_butt.disabled=true;}
 if (ressource['metan']>= (bioreactor_level+1)*50)
-upgrade_div.innerHTML+="<span class=\"ok\">"+(bioreactor_level+1)*50+"M$ денег.</span>";
+upgrade_div.innerHTML+="<span class=\"ok\">"+(bioreactor_level+1)*50+"M$ РґРµРЅРµРі.</span>";
 else
-{upgrade_div.innerHTML+="<span class=\"failed\">"+(bioreactor_level+1)*50+"M$ денег.</span>";upgrade_butt.disabled=true;}
+{upgrade_div.innerHTML+="<span class=\"failed\">"+(bioreactor_level+1)*50+"M$ РґРµРЅРµРі.</span>";upgrade_butt.disabled=true;}
 upgrade_div.innerHTML+="</b>";
 }
 
 if (!u2){
-upgrade_div_r.innerHTML="<b>Требуется: ";
+upgrade_div_r.innerHTML="<b>РўСЂРµР±СѓРµС‚СЃСЏ: ";
 if (ressource['metan']>= (robot_level+1)*100+Math.pow(1.1, robot_level)-1)
-{upgrade_div_r.innerHTML+="<span class=\"ok\">"+Math.ceil((robot_level+1)*100+Math.pow(1.1, robot_level)-1)+"M$  денег. </span>"; upgrade_butt_r.disabled=false;}
+{upgrade_div_r.innerHTML+="<span class=\"ok\">"+Math.ceil((robot_level+1)*100+Math.pow(1.1, robot_level)-1)+"M$  РґРµРЅРµРі. </span>"; upgrade_butt_r.disabled=false;}
 else
-{upgrade_div_r.innerHTML+="<span class=\"failed\">"+Math.ceil((robot_level+1)*100+Math.pow(1.1, robot_level)-1)+"M$  денег. </span>"; upgrade_butt_r.disabled=true;}
+{upgrade_div_r.innerHTML+="<span class=\"failed\">"+Math.ceil((robot_level+1)*100+Math.pow(1.1, robot_level)-1)+"M$  РґРµРЅРµРі. </span>"; upgrade_butt_r.disabled=true;}
 upgrade_div_r.innerHTML+="</b>";
 }
 
 if (!u3){
-upgrade_div_u.innerHTML="<b>Требуется: ";
+upgrade_div_u.innerHTML="<b>РўСЂРµР±СѓРµС‚СЃСЏ: ";
 if (ressource['metan']>= unhuman_level*50)
-{upgrade_div_u.innerHTML+="<span class=\"ok\">"+Math.ceil(unhuman_level*50)+"M$  денег,</span>"; upgrade_butt_u.disabled=false;}
+{upgrade_div_u.innerHTML+="<span class=\"ok\">"+Math.ceil(unhuman_level*50)+"M$  РґРµРЅРµРі,</span>"; upgrade_butt_u.disabled=false;}
 else
-{upgrade_div_u.innerHTML+="<span class=\"failed\">"+Math.ceil(unhuman_level*50)+"M$  денег,</span>";upgrade_butt_u.disabled=true;}
+{upgrade_div_u.innerHTML+="<span class=\"failed\">"+Math.ceil(unhuman_level*50)+"M$  РґРµРЅРµРі,</span>";upgrade_butt_u.disabled=true;}
 if (ressource['religion']<=0)
-{upgrade_div_u.innerHTML+="<span class=\"ok\"> отрицательный или нулевой уровень спама</span>";}
+{upgrade_div_u.innerHTML+="<span class=\"ok\"> РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Р№ РёР»Рё РЅСѓР»РµРІРѕР№ СѓСЂРѕРІРµРЅСЊ СЃРїР°РјР°</span>";}
 else
-{upgrade_div_u.innerHTML+="<span class=\"failed\"> отрицательный или нулевой уровень спама</span>"; upgrade_butt_u.disabled=true;}
+{upgrade_div_u.innerHTML+="<span class=\"failed\"> РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Р№ РёР»Рё РЅСѓР»РµРІРѕР№ СѓСЂРѕРІРµРЅСЊ СЃРїР°РјР°</span>"; upgrade_butt_u.disabled=true;}
 upgrade_div_u.innerHTML+="</b>";
 }
 
 
 if (!u4){
-ros_div.innerHTML="<b>Требуется: ";
+ros_div.innerHTML="<b>РўСЂРµР±СѓРµС‚СЃСЏ: ";
 if (ressource['smeh']>= rosatiy_l*25)
-{ros_div.innerHTML+="<span class=\"ok\">"+(rosatiy_l*25)+"  пост в блоге.</span>"; ros_but.disabled=false;}
+{ros_div.innerHTML+="<span class=\"ok\">"+(rosatiy_l*25)+"  РїРѕСЃС‚ РІ Р±Р»РѕРіРµ.</span>"; ros_but.disabled=false;}
 else
-{ros_div.innerHTML+="<span class=\"failed\">"+(rosatiy_l*25)+"  пост в блоге.</span>";ros_but.disabled=true;}
+{ros_div.innerHTML+="<span class=\"failed\">"+(rosatiy_l*25)+"  РїРѕСЃС‚ РІ Р±Р»РѕРіРµ.</span>";ros_but.disabled=true;}
 upgrade_div_u.innerHTML+="</b>";
 }
 
 if (!u5){
-upgrade_div_s.innerHTML="<b>Требуется: ";
+upgrade_div_s.innerHTML="<b>РўСЂРµР±СѓРµС‚СЃСЏ: ";
 if (ressource['metan']>= science_level*100)
-{upgrade_div_s.innerHTML+="<span class=\"ok\">"+science_level*100+"M$  денег. </span>"; upgrade_butt_s.disabled=false;
+{upgrade_div_s.innerHTML+="<span class=\"ok\">"+science_level*100+"M$  РґРµРЅРµРі. </span>"; upgrade_butt_s.disabled=false;
 }
 else
-{upgrade_div_s.innerHTML+="<span class=\"failed\">"+science_level*100+"M$  денег. </span>"; upgrade_butt_s.disabled=true;}
+{upgrade_div_s.innerHTML+="<span class=\"failed\">"+science_level*100+"M$  РґРµРЅРµРі. </span>"; upgrade_butt_s.disabled=true;}
 upgrade_div_s.innerHTML+="</b>";
 }
 
@@ -367,27 +367,27 @@ next_it();
 function next_it()
 {
 if (pause) return;
-news.value="Ход - "+iteration+"\n";
+news.value="РҐРѕРґ - "+iteration+"\n";
 
 
-//Шаг 1 - производство ресурсов
+//РЁР°Рі 1 - РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ СЂРµСЃСѓСЂСЃРѕРІ
 
 
-//прирост говна
+//РїСЂРёСЂРѕСЃС‚ РіРѕРІРЅР°
 
 var tmp=ressource['bydlo']*1.5;
 if (tmp>0)
-{news.value+="Пользователями было произведено "+ tmp + "Пб данных";
+{news.value+="РџРѕР»СЊР·РѕРІР°С‚РµР»СЏРјРё Р±С‹Р»Рѕ РїСЂРѕРёР·РІРµРґРµРЅРѕ "+ tmp + "РџР± РґР°РЅРЅС‹С…";
 ressource['govno']+=tmp;}
 
 
-//производство метана
+//РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РјРµС‚Р°РЅР°
 if (ressource['govno']>gov_to_met*(bioreactor_level+1))
 {
 var tmp=Math.ceil(gov_to_met*(bioreactor_level+1)/g_t_m_koeff);
 if (tmp>0)
-{news.value+="\n"+ Math.ceil(gov_to_met*(bioreactor_level+1))+ "Пб данных обработано.";
-news.value+="При этом заработано "+ Math.ceil(gov_to_met*(bioreactor_level+1)/g_t_m_koeff)+ "M$ денег";
+{news.value+="\n"+ Math.ceil(gov_to_met*(bioreactor_level+1))+ "РџР± РґР°РЅРЅС‹С… РѕР±СЂР°Р±РѕС‚Р°РЅРѕ.";
+news.value+="РџСЂРё СЌС‚РѕРј Р·Р°СЂР°Р±РѕС‚Р°РЅРѕ "+ Math.ceil(gov_to_met*(bioreactor_level+1)/g_t_m_koeff)+ "M$ РґРµРЅРµРі";
 
 ressource['metan']=safe_plus(ressource['metan'], tmp);
 ressource['govno']=safe_plus(ressource['govno'], -Math.ceil(gov_to_met*(bioreactor_level+1)) );}
@@ -396,27 +396,27 @@ else
 {
 var tmp=Math.ceil(ressource['govno']/g_t_m_koeff);
 if (tmp>0)
-{news.value+="\n Все имеющиеся в наличии данные были обработаны.";
-news.value+="При этом заработано "+ tmp+ "M$ денег";
+{news.value+="\n Р’СЃРµ РёРјРµСЋС‰РёРµСЃСЏ РІ РЅР°Р»РёС‡РёРё РґР°РЅРЅС‹Рµ Р±С‹Р»Рё РѕР±СЂР°Р±РѕС‚Р°РЅС‹.";
+news.value+="РџСЂРё СЌС‚РѕРј Р·Р°СЂР°Р±РѕС‚Р°РЅРѕ "+ tmp+ "M$ РґРµРЅРµРі";
 ressource['metan']=safe_plus(ressource['metan'], tmp);
 ressource['govno']=0; }
 }
 
-//размножение быдла
+//СЂР°Р·РјРЅРѕР¶РµРЅРёРµ Р±С‹РґР»Р°
 tmp=Math.ceil(ressource['bydlo']/bb_koeff);
 if (tmp>0)
-{news.value+="\nПришло  "+ tmp+ " пользователей.";
+{news.value+="\nРџСЂРёС€Р»Рѕ  "+ tmp+ " РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.";
 ressource['bydlo']=safe_plus(ressource['bydlo'], tmp);}
 
 if (ressource['metan']<Math.ceil(ressource['bydlo']/bm_koeff))
 {
 tmp=(ressource['bydlo']-Math.ceil(ressource['metan']*bm_koeff));
 if (tmp>0)
-{news.value+="\n"+ tmp+ " пользователей умерло из-за недостатка денег.";
+{news.value+="\n"+ tmp+ " РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ СѓРјРµСЂР»Рѕ РёР·-Р·Р° РЅРµРґРѕСЃС‚Р°С‚РєР° РґРµРЅРµРі.";
 ressource['bydlo']=Math.ceil(ressource['metan']*bm_koeff);}
 }
 
-//размножение клерикалов
+//СЂР°Р·РјРЅРѕР¶РµРЅРёРµ РєР»РµСЂРёРєР°Р»РѕРІ
 var tmp=ressource['priest'];
 ressource['priest']+=Math.ceil(ressource['priest']/10);
 
@@ -427,70 +427,70 @@ ressource['priest']=safe_plus(ressource['priest'], Math.ceil(ressource['govno']/
 if (ressource['priest']>ressource['bydlo']) ressource['priest']=ressource['bydlo'];
 
 if (tmp>ressource['priest'])
-news.value+="\nКоличество сеошников уменьшилось на "+ (tmp-ressource['priest'])+ " единиц.";
+news.value+="\nРљРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРѕС€РЅРёРєРѕРІ СѓРјРµРЅСЊС€РёР»РѕСЃСЊ РЅР° "+ (tmp-ressource['priest'])+ " РµРґРёРЅРёС†.";
 else if (tmp<ressource['priest'])
-news.value+="\nКоличество сеошников возросло на "+ (ressource['priest']-tmp)+ " единиц.";
+news.value+="\nРљРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРѕС€РЅРёРєРѕРІ РІРѕР·СЂРѕСЃР»Рѕ РЅР° "+ (ressource['priest']-tmp)+ " РµРґРёРЅРёС†.";
 
 
 
-//размножение гуманитариев
+//СЂР°Р·РјРЅРѕР¶РµРЅРёРµ РіСѓРјР°РЅРёС‚Р°СЂРёРµРІ
 tmp=Math.ceil(ressource['scientist']/10);
 if (tmp>0)
 {ressource['humanist']+=tmp;
-news.value+="\nКоличество появившихся сливателей: "+ tmp+ ".";}
+news.value+="\nРљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕСЏРІРёРІС€РёС…СЃСЏ СЃР»РёРІР°С‚РµР»РµР№: "+ tmp+ ".";}
 
 if (res_scientist['work2']+res_unhuman['work0'])
-{//антиклерикальная пропаганда
+{//Р°РЅС‚РёРєР»РµСЂРёРєР°Р»СЊРЅР°СЏ РїСЂРѕРїР°РіР°РЅРґР°
 ressource['religion']-=res_scientist['work2'];
 
-//антиклерикальная пропаганда
+//Р°РЅС‚РёРєР»РµСЂРёРєР°Р»СЊРЅР°СЏ РїСЂРѕРїР°РіР°РЅРґР°
 ressource['religion']-=res_unhuman['work0'];
 
-news.value+="\nСилами разработчиков и менеджеров уничтожено "+ (res_unhuman['work0']+res_scientist['work2'])+ " спама.";
+news.value+="\nРЎРёР»Р°РјРё СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ Рё РјРµРЅРµРґР¶РµСЂРѕРІ СѓРЅРёС‡С‚РѕР¶РµРЅРѕ "+ (res_unhuman['work0']+res_scientist['work2'])+ " СЃРїР°РјР°.";
 }
 
-//производство матана
+//РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РјР°С‚Р°РЅР°
 if (res_scientist['work1']>0){
 if (res_scientist['work1']*matan_metan_koeff<=ressource['metan'])
 {
-news.value+="\nРазработчиками написано "+ Math.ceil(res_scientist['work1']*matan_koeff)+ "K строк  кода.";
-news.value+="\nПри этом израсходовано "+ Math.ceil(res_scientist['work1']*matan_metan_koeff)+ "M$ денег.";
+news.value+="\nР Р°Р·СЂР°Р±РѕС‚С‡РёРєР°РјРё РЅР°РїРёСЃР°РЅРѕ "+ Math.ceil(res_scientist['work1']*matan_koeff)+ "K СЃС‚СЂРѕРє  РєРѕРґР°.";
+news.value+="\nРџСЂРё СЌС‚РѕРј РёР·СЂР°СЃС…РѕРґРѕРІР°РЅРѕ "+ Math.ceil(res_scientist['work1']*matan_metan_koeff)+ "M$ РґРµРЅРµРі.";
 ressource['matan']= safe_plus(ressource['matan'], res_scientist['work1']*matan_koeff);
 ressource['metan']= safe_plus(ressource['metan'], -res_scientist['work1']*matan_metan_koeff);
 }
 else {
-news.value+="\nРазработчиками написано "+ Math.ceil(ressource['metan']/matan_metan_koeff*matan_koeff)+ "K строк кода.";
-news.value+="\nПри этом израсходованы все доступные деньги.";
+news.value+="\nР Р°Р·СЂР°Р±РѕС‚С‡РёРєР°РјРё РЅР°РїРёСЃР°РЅРѕ "+ Math.ceil(ressource['metan']/matan_metan_koeff*matan_koeff)+ "K СЃС‚СЂРѕРє РєРѕРґР°.";
+news.value+="\nРџСЂРё СЌС‚РѕРј РёР·СЂР°СЃС…РѕРґРѕРІР°РЅС‹ РІСЃРµ РґРѕСЃС‚СѓРїРЅС‹Рµ РґРµРЅСЊРіРё.";
 ressource['matan']= safe_plus(ressource['matan'], ressource['metan']/matan_metan_koeff*matan_koeff);
 ressource['metan']= 0;
 }
 }
 
-//производство смехуечек UNHUMAN
+//РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ СЃРјРµС…СѓРµС‡РµРє UNHUMAN
 if (res_unhuman['work2']>0){
 if (res_unhuman['work2']*smeh_koeff<=ressource['matan'])
 {
-news.value+="\nМенеджеры написали "+ Math.ceil(res_unhuman['work2']*smeh_koeff)+ "  постов в блог.";
+news.value+="\nРњРµРЅРµРґР¶РµСЂС‹ РЅР°РїРёСЃР°Р»Рё "+ Math.ceil(res_unhuman['work2']*smeh_koeff)+ "  РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі.";
 ressource['smeh']= safe_plus(ressource['smeh'], res_unhuman['work2']*smeh_koeff);
 }
 else {
-news.value+="\nМенеджеры написали "+ Math.ceil(ressource['matan'])+ "  постов в блог.";
+news.value+="\nРњРµРЅРµРґР¶РµСЂС‹ РЅР°РїРёСЃР°Р»Рё "+ Math.ceil(ressource['matan'])+ "  РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі.";
 ressource['smeh']= safe_plus(ressource['smeh'], ressource['matan']);
 }
 }
-//производство метана Robot
+//РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ РјРµС‚Р°РЅР° Robot
 
 if (res_robot['work2']>0){
 if (res_robot['work2']<=ressource['bydlo'])
 {
-news.value+="\nСотрудниками антиспама было заработано "+ Math.ceil(res_robot['work2']*bydlo_metan_koeff)+ "M$  денег.";
-news.value+="\nПри этом было забанено "+ res_robot['work2']+ " пользователей.";
+news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р±С‹Р»Рѕ Р·Р°СЂР°Р±РѕС‚Р°РЅРѕ "+ Math.ceil(res_robot['work2']*bydlo_metan_koeff)+ "M$  РґРµРЅРµРі.";
+news.value+="\nРџСЂРё СЌС‚РѕРј Р±С‹Р»Рѕ Р·Р°Р±Р°РЅРµРЅРѕ "+ res_robot['work2']+ " РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.";
 ressource['metan']= safe_plus(ressource['metan'], res_robot['work2']*bydlo_metan_koeff);
 ressource['bydlo']= safe_plus(ressource['bydlo'],-res_robot['work2']);
 }
 else {
-news.value+="\nСотрудниками антиспама было заработано "+ Math.ceil(ressource['bydlo']*bydlo_metan_koeff)+ "M$  денег.";
-news.value+="\nПри этом были забанены все пользователи\n".
+news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р±С‹Р»Рѕ Р·Р°СЂР°Р±РѕС‚Р°РЅРѕ "+ Math.ceil(ressource['bydlo']*bydlo_metan_koeff)+ "M$  РґРµРЅРµРі.";
+news.value+="\nРџСЂРё СЌС‚РѕРј Р±С‹Р»Рё Р·Р°Р±Р°РЅРµРЅС‹ РІСЃРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё\n".
 ressource['metan']= safe_plus(ressource['metan'],ressource['bydlo']*bydlo_metan_koeff);
 ressource['bydlo']= 0;
 }
@@ -498,26 +498,26 @@ ressource['bydlo']= 0;
 
 tmp=ressource['scientist'];
 
-//размножение ученых
+//СЂР°Р·РјРЅРѕР¶РµРЅРёРµ СѓС‡РµРЅС‹С…
 if (res_scientist['work0']*matan_scientist_koeff<=ressource['matan'])
 ressource['scientist']= safe_plus(ressource['scientist'],res_scientist['work0']);
 else
 ressource['scientist']=safe_plus(ressource['scientist'],Math.ceil(ressource['matan']/matan_scientist_koeff));
 
 if ((ressource['scientist']-tmp)>0)
-news.value+="\nНанято "+ (ressource['scientist']-tmp)+ "  разработчиков.";
+news.value+="\nРќР°РЅСЏС‚Рѕ "+ (ressource['scientist']-tmp)+ "  СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ.";
 
 if (ressource['scientist']>ressource['metan'])
 {
 tmp=ressource['scientist'];
-news.value+="\n"+ (ressource['scientist']-ressource['metan'])+ "  разработчиков уволено из-за недостатка денег.";
+news.value+="\n"+ (ressource['scientist']-ressource['metan'])+ "  СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ СѓРІРѕР»РµРЅРѕ РёР·-Р·Р° РЅРµРґРѕСЃС‚Р°С‚РєР° РґРµРЅРµРі.";
 ressource['scientist']=ressource['metan'];
 }
 
 reduce('scientist');
 
 tmp=ressource['unhuman'];
-//размножение UNHUMAN
+//СЂР°Р·РјРЅРѕР¶РµРЅРёРµ UNHUMAN
 if (ressource['religion']<0)
 {
 var k=Math.abs(ressource['religion']*unhuman_level/10)*Math.random();
@@ -531,31 +531,31 @@ if (ressource['unhuman']>ressource['scientist'])
 {ressource['unhuman']=ressource['scientist'];}
 
 if ((ressource['unhuman']-tmp)>0)
-news.value+="\nПроизведено "+ (ressource['unhuman']-tmp)+ "  нелюдей.";
+news.value+="\nРџСЂРѕРёР·РІРµРґРµРЅРѕ "+ (ressource['unhuman']-tmp)+ "  РЅРµР»СЋРґРµР№.";
 
 
 
 if (ressource['unhuman']>ressource['metan']/metan_unhuman_koeff)
 {
-news.value+="\n"+ ressource['unhuman']-Math.ceil(ressource['metan']/metan_unhuman_koeff)+ "  менеджеров уволено из-за недостатка денег.";
+news.value+="\n"+ ressource['unhuman']-Math.ceil(ressource['metan']/metan_unhuman_koeff)+ "  РјРµРЅРµРґР¶РµСЂРѕРІ СѓРІРѕР»РµРЅРѕ РёР·-Р·Р° РЅРµРґРѕСЃС‚Р°С‚РєР° РґРµРЅРµРі.";
 ressource['unhuman']=Math.ceil(ressource['metan']/metan_unhuman_koeff);}
 
 reduce('unhuman');
 
 
-//размножение Robot
+//СЂР°Р·РјРЅРѕР¶РµРЅРёРµ Robot
 if (res_robot['work0']>0)
 {if (res_robot['work0']*metan_robot_koeff<=ressource['metan'])
 {
-news.value+="\nСотрудниками антиспама было нанято "+ res_robot['work0']+ "  сотрудников антиспама.";
-news.value+="\nПри этом было израсходовано "+ Math.ceil(res_robot['work0']*metan_robot_koeff)+ "M$ денег.";
+news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р±С‹Р»Рѕ РЅР°РЅСЏС‚Рѕ "+ res_robot['work0']+ "  СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Р°РЅС‚РёСЃРїР°РјР°.";
+news.value+="\nРџСЂРё СЌС‚РѕРј Р±С‹Р»Рѕ РёР·СЂР°СЃС…РѕРґРѕРІР°РЅРѕ "+ Math.ceil(res_robot['work0']*metan_robot_koeff)+ "M$ РґРµРЅРµРі.";
 ressource['robot']=safe_plus(ressource['robot'],res_robot['work0']);
 ressource['metan']=safe_plus(ressource['metan'],-res_robot['work0']*metan_robot_koeff);
 }
 else
 {
-news.value+="\nСотрудниками антиспама было нанято "+ Math.ceil(ressource['metan']/metan_robot_koeff)+ "  сотрудников антиспама.";
-news.value+="\nПри этом были израсходованы все деньги.";
+news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р±С‹Р»Рѕ РЅР°РЅСЏС‚Рѕ "+ Math.ceil(ressource['metan']/metan_robot_koeff)+ "  СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Р°РЅС‚РёСЃРїР°РјР°.";
+news.value+="\nРџСЂРё СЌС‚РѕРј Р±С‹Р»Рё РёР·СЂР°СЃС…РѕРґРѕРІР°РЅС‹ РІСЃРµ РґРµРЅСЊРіРё.";
 ressource['robot']=safe_plus(ressource['robot'],ressource['metan']/metan_robot_koeff);
 ressource['metan']=0;
 }}
@@ -565,32 +565,32 @@ ressource['metan']=0;
 
 
 
-//Убийство гуманитариев
+//РЈР±РёР№СЃС‚РІРѕ РіСѓРјР°РЅРёС‚Р°СЂРёРµРІ
 if (res_unhuman['work1']>0)
 {
 var t1=safe_plus(ressource['humanist'],-Math.ceil(res_unhuman['work1']*(1+unhuman_priest_kill/10)))
-news.value+="\nМенеджерыми уничтожено "+ (ressource['humanist']-t1)+ "  сливателей.";
+news.value+="\nРњРµРЅРµРґР¶РµСЂС‹РјРё СѓРЅРёС‡С‚РѕР¶РµРЅРѕ "+ (ressource['humanist']-t1)+ "  СЃР»РёРІР°С‚РµР»РµР№.";
 ressource['humanist']=t1;}
 
-//Убийство клерикалов Robot
+//РЈР±РёР№СЃС‚РІРѕ РєР»РµСЂРёРєР°Р»РѕРІ Robot
 if (res_robot['work1']>0){
 if (res_robot['work1']*robot_priest_kill>ressource['priest'])
-{news.value+="\nСотрудниками антиспама забанены все сеошники.";
+{news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р·Р°Р±Р°РЅРµРЅС‹ РІСЃРµ СЃРµРѕС€РЅРёРєРё.";
 var t1=safe_plus(ressource['bydlo'],-(res_robot['work1']*robot_priest_kill-ressource['priest']))
-news.value+="\nСотрудниками антиспама забанено "+(ressource['bydlo']-t1)+ " пользователей.";
+news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р·Р°Р±Р°РЅРµРЅРѕ "+(ressource['bydlo']-t1)+ " РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.";
 ressource['bydlo']= t1;
 ressource['priest']=0;}
 else
 {
-news.value+="\nСотрудниками антиспама забанено "+ Math.ceil(res_robot['work1']*robot_priest_kill)+ "  сеошников.";
+news.value+="\nРЎРѕС‚СЂСѓРґРЅРёРєР°РјРё Р°РЅС‚РёСЃРїР°РјР° Р·Р°Р±Р°РЅРµРЅРѕ "+ Math.ceil(res_robot['work1']*robot_priest_kill)+ "  СЃРµРѕС€РЅРёРєРѕРІ.";
 ressource['priest']=safe_plus(ressource['priest'],-res_robot['work1']*robot_priest_kill);}
 }
 news.value+="\n";
 
-//Погромы
+//РџРѕРіСЂРѕРјС‹
 if (ressource['priest']>0)
 {ressource['religion']+=ressource['priest'];
-news.value+="\nСеошники произвели "+ (ressource['priest'])+ " спама.";}
+news.value+="\nРЎРµРѕС€РЅРёРєРё РїСЂРѕРёР·РІРµР»Рё "+ (ressource['priest'])+ " СЃРїР°РјР°.";}
 
 
 var rel=ressource['religion'];
@@ -598,7 +598,7 @@ if (rel<0) rel=1/Math.abs(rel-1);
 else rel=rel+1;
 if (rel*ressource['bydlo']/(ressource['matan']+1)>0)
 {
-news.value+="\nВ результате бунтов уничтожено "+ (ressource['metan']-safe_plus(ressource['metan'],-rel*ressource['bydlo']/(ressource['matan']+1)))+ "M$  денег, "+ (ressource['matan']-safe_plus(ressource['matan'],-rel*ressource['bydlo']/(ressource['matan']+1)))+ "K строк кода.";
+news.value+="\nР’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРЅС‚РѕРІ СѓРЅРёС‡С‚РѕР¶РµРЅРѕ "+ (ressource['metan']-safe_plus(ressource['metan'],-rel*ressource['bydlo']/(ressource['matan']+1)))+ "M$  РґРµРЅРµРі, "+ (ressource['matan']-safe_plus(ressource['matan'],-rel*ressource['bydlo']/(ressource['matan']+1)))+ "K СЃС‚СЂРѕРє РєРѕРґР°.";
 ressource['metan']=safe_plus(ressource['metan'],-rel*ressource['bydlo']/(ressource['matan']+1));
 ressource['matan']=safe_plus(ressource['matan'],-rel*ressource['bydlo']/(ressource['matan']+1));
 }
@@ -608,8 +608,8 @@ var t1=safe_plus(ressource['matan'],-(humanist_eat_matan*ressource['humanist']))
 var t2=safe_plus(ressource['smeh'],-(humanist_eat_smeh*ressource['humanist']));
 //alert(t2);
 var t3=safe_plus(ressource['govno'],-(humanist_eat_shit*ressource['humanist']));
-news.value+="\nСливателями уничтожено "+ (ressource['matan']-t1)+ "K строк кода, "+ (ressource['smeh']-t2)+ "  постов в блог.";
-news.value+="\nСливателями обработано "+ (ressource['govno']-t3)+ "Пб  данных.";
+news.value+="\nРЎР»РёРІР°С‚РµР»СЏРјРё СѓРЅРёС‡С‚РѕР¶РµРЅРѕ "+ (ressource['matan']-t1)+ "K СЃС‚СЂРѕРє РєРѕРґР°, "+ (ressource['smeh']-t2)+ "  РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі.";
+news.value+="\nРЎР»РёРІР°С‚РµР»СЏРјРё РѕР±СЂР°Р±РѕС‚Р°РЅРѕ "+ (ressource['govno']-t3)+ "РџР±  РґР°РЅРЅС‹С….";
 
 ressource['matan']=t1;
 ressource['smeh']=t2;
@@ -639,7 +639,7 @@ get_event(realt.checked);
 
 if (ressource['bydlo']==0)
 {
-news.value+="\nПоздравяем! Развитие поиска и сопряженное с ним уход пользователей привели к эволюционному скачку!\n Вчерашнии разработчики переведены в пользователей, часть менеджеров стала разработчиками, часть слилась с антиспамом.\n Все сеошники и сливатели выброшены на свалку истории.";
+news.value+="\nРџРѕР·РґСЂР°РІСЏРµРј! Р Р°Р·РІРёС‚РёРµ РїРѕРёСЃРєР° Рё СЃРѕРїСЂСЏР¶РµРЅРЅРѕРµ СЃ РЅРёРј СѓС…РѕРґ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РїСЂРёРІРµР»Рё Рє СЌРІРѕР»СЋС†РёРѕРЅРЅРѕРјСѓ СЃРєР°С‡РєСѓ!\n Р’С‡РµСЂР°С€РЅРёРё СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРё РїРµСЂРµРІРµРґРµРЅС‹ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, С‡Р°СЃС‚СЊ РјРµРЅРµРґР¶РµСЂРѕРІ СЃС‚Р°Р»Р° СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°РјРё, С‡Р°СЃС‚СЊ СЃР»РёР»Р°СЃСЊ СЃ Р°РЅС‚РёСЃРїР°РјРѕРј.\n Р’СЃРµ СЃРµРѕС€РЅРёРєРё Рё СЃР»РёРІР°С‚РµР»Рё РІС‹Р±СЂРѕС€РµРЅС‹ РЅР° СЃРІР°Р»РєСѓ РёСЃС‚РѕСЂРёРё.";
 ressource['bydlo']=ressource['scientist'];
 ressource['scientist']=Math.ceil(ressource['unhuman']/2);
 ressource['unhuman']=Math.ceil(ressource['unhuman']/2+ressource['robot']/2);
@@ -666,7 +666,7 @@ redraw_ressources();
 u1=true;
 redraw_tr();
 upgrade_butt.disabled=true;
-upgrade_div.innerHTML="<b>Обновление произведено</b>";
+upgrade_div.innerHTML="<b>РћР±РЅРѕРІР»РµРЅРёРµ РїСЂРѕРёР·РІРµРґРµРЅРѕ</b>";
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -684,7 +684,7 @@ redraw_ressources();
 u2=true;
 redraw_tr();
 upgrade_butt_r.disabled=true;
-upgrade_div_r.innerHTML="<b>Обновление произведено</b>";
+upgrade_div_r.innerHTML="<b>РћР±РЅРѕРІР»РµРЅРёРµ РїСЂРѕРёР·РІРµРґРµРЅРѕ</b>";
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -702,7 +702,7 @@ redraw_ressources();
 u3=true;
 redraw_tr();
 upgrade_butt_u.disabled=true;
-upgrade_div_u.innerHTML="<b>Обновление произведено</b>";
+upgrade_div_u.innerHTML="<b>РћР±РЅРѕРІР»РµРЅРёРµ РїСЂРѕРёР·РІРµРґРµРЅРѕ</b>";
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -716,7 +716,7 @@ redraw_ressources();
 u4=true;
 redraw_tr();
 ros_but.disabled=true;
-ros_div.innerHTML="<span class=\"failed\">Мы потеряли 50% пользователей, а империя получила много денег.</span>"
+ros_div.innerHTML="<span class=\"failed\">РњС‹ РїРѕС‚РµСЂСЏР»Рё 50% РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, Р° РёРјРїРµСЂРёСЏ РїРѕР»СѓС‡РёР»Р° РјРЅРѕРіРѕ РґРµРЅРµРі.</span>"
 }
 
 function upgrade_science()
@@ -732,5 +732,5 @@ redraw_ressources();
 u5=true;
 redraw_tr();
 upgrade_butt_s.disabled=true;
-upgrade_div_s.innerHTML="<b>Обновление произведено</b>";
+upgrade_div_s.innerHTML="<b>РћР±РЅРѕРІР»РµРЅРёРµ РїСЂРѕРёР·РІРµРґРµРЅРѕ</b>";
 }

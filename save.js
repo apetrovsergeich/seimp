@@ -41,7 +41,7 @@ res_unhuman['d_work2'].value=res_unhuman['work2'];
 redraw_tr();
 redraw_graph();
 
-news.value="Произведен возврат к ходу "+iteration+"\n";
+news.value="РџСЂРѕРёР·РІРµРґРµРЅ РІРѕР·РІСЂР°С‚ Рє С…РѕРґСѓ "+iteration+"\n";
 step_.innerHTML=iteration;
 close_window_s();
 }
@@ -49,7 +49,7 @@ close_window_s();
 function create_string()
 {
 var str="";
-//фыфыфыфыфыфыфы
+//С„С‹С„С‹С„С‹С„С‹С„С‹С„С‹С„С‹
 str+="unhuman_level="+unhuman_level+";";
 str+="robot_level="+robot_level+";";
 str+="science_level="+science_level+";";

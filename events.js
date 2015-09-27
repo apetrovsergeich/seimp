@@ -1,37 +1,37 @@
 var event_names=new Array("warrax", "kuraev", "kirill", "schreiber", "alksnis", "holmogor");
-var events={warrax:"Депутат Мизулина продолжила свою деятельность, смутив умы менеджеров и обратив их к патриотизму и исконным моральным ценностям.",
-	    kuraev:"В Поисковую Империю проник Ашманов, привезший новую книгу про roem.ru и вызвавший резкую активизацию сеошников и сливателей.",
-	    kirill:"В Поисковую Империю тайком пробрался отец Кирилл, переодетый в женское платье, и принялся уничтожать посты в блоге, что привело к распространению сео.",
-	    schreiber:"Группа компаний seopult пробралась на habrahabr.ru и начла распространять сео среди пользователей. Обезумевшие люди принялись генерировать данные.",
-	    alksnis:"Желающий отыграть позиции Mail.ru устроил смуту среди сотрудников антиспама. Сотрудники начали увольняться.",
-	    holmogor:"Сергей Брин устроил беспрецедентную акцию по дистрибуции Гугла, замаскированную под детские утренники. В результате произошел массовый исход пользователей, повлекший утечку денег."}
+var events={warrax:"Р”РµРїСѓС‚Р°С‚ РњРёР·СѓР»РёРЅР° РїСЂРѕРґРѕР»Р¶РёР»Р° СЃРІРѕСЋ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚СЊ, СЃРјСѓС‚РёРІ СѓРјС‹ РјРµРЅРµРґР¶РµСЂРѕРІ Рё РѕР±СЂР°С‚РёРІ РёС… Рє РїР°С‚СЂРёРѕС‚РёР·РјСѓ Рё РёСЃРєРѕРЅРЅС‹Рј РјРѕСЂР°Р»СЊРЅС‹Рј С†РµРЅРЅРѕСЃС‚СЏРј.",
+	    kuraev:"Р’ РџРѕРёСЃРєРѕРІСѓСЋ РРјРїРµСЂРёСЋ РїСЂРѕРЅРёРє РђС€РјР°РЅРѕРІ, РїСЂРёРІРµР·С€РёР№ РЅРѕРІСѓСЋ РєРЅРёРіСѓ РїСЂРѕ roem.ru Рё РІС‹Р·РІР°РІС€РёР№ СЂРµР·РєСѓСЋ Р°РєС‚РёРІРёР·Р°С†РёСЋ СЃРµРѕС€РЅРёРєРѕРІ Рё СЃР»РёРІР°С‚РµР»РµР№.",
+	    kirill:"Р’ РџРѕРёСЃРєРѕРІСѓСЋ РРјРїРµСЂРёСЋ С‚Р°Р№РєРѕРј РїСЂРѕР±СЂР°Р»СЃСЏ РѕС‚РµС† РљРёСЂРёР»Р», РїРµСЂРµРѕРґРµС‚С‹Р№ РІ Р¶РµРЅСЃРєРѕРµ РїР»Р°С‚СЊРµ, Рё РїСЂРёРЅСЏР»СЃСЏ СѓРЅРёС‡С‚РѕР¶Р°С‚СЊ РїРѕСЃС‚С‹ РІ Р±Р»РѕРіРµ, С‡С‚Рѕ РїСЂРёРІРµР»Рѕ Рє СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅРµРЅРёСЋ СЃРµРѕ.",
+	    schreiber:"Р“СЂСѓРїРїР° РєРѕРјРїР°РЅРёР№ seopult РїСЂРѕР±СЂР°Р»Р°СЃСЊ РЅР° habrahabr.ru Рё РЅР°С‡Р»Р° СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏС‚СЊ СЃРµРѕ СЃСЂРµРґРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№. РћР±РµР·СѓРјРµРІС€РёРµ Р»СЋРґРё РїСЂРёРЅСЏР»РёСЃСЊ РіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РґР°РЅРЅС‹Рµ.",
+	    alksnis:"Р–РµР»Р°СЋС‰РёР№ РѕС‚С‹РіСЂР°С‚СЊ РїРѕР·РёС†РёРё Mail.ru СѓСЃС‚СЂРѕРёР» СЃРјСѓС‚Сѓ СЃСЂРµРґРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Р°РЅС‚РёСЃРїР°РјР°. РЎРѕС‚СЂСѓРґРЅРёРєРё РЅР°С‡Р°Р»Рё СѓРІРѕР»СЊРЅСЏС‚СЊСЃСЏ.",
+	    holmogor:"РЎРµСЂРіРµР№ Р‘СЂРёРЅ СѓСЃС‚СЂРѕРёР» Р±РµСЃРїСЂРµС†РµРґРµРЅС‚РЅСѓСЋ Р°РєС†РёСЋ РїРѕ РґРёСЃС‚СЂРёР±СѓС†РёРё Р“СѓРіР»Р°, Р·Р°РјР°СЃРєРёСЂРѕРІР°РЅРЅСѓСЋ РїРѕРґ РґРµС‚СЃРєРёРµ СѓС‚СЂРµРЅРЅРёРєРё. Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїСЂРѕРёР·РѕС€РµР» РјР°СЃСЃРѕРІС‹Р№ РёСЃС…РѕРґ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РїРѕРІР»РµРєС€РёР№ СѓС‚РµС‡РєСѓ РґРµРЅРµРі."}
 
 
 var action={
-warrax: function(){var tmp =ressource['unhuman']-safe_plus(ressource['unhuman'], -iteration/3); news.value +='\n'+tmp +' менеджеров уволилось и стало пользователями под впечатлением от очередного законопроекта депутата Мизулиной".'; ressource['bydlo']+=tmp;  ressource['unhuman']-=tmp; reduce('unhuman');},
-kuraev:function(){ressource['priest']=safe_plus(ressource['priest'], iteration/3); ressource['humanist']=safe_plus(ressource['humanist'], iteration/3);news.value +='\nТлетворное влияние Ашманова увеличило количество сеошников и сливателей на '+Math.ceil(iteration/3);},
-kirill: function(){var tmp=ressource['smeh']-safe_plus(ressource['smeh'], -iteration/3); ressource['religion']+=Math.ceil(iteration/3); news.value +='\nТлетворное влияние отца Кирилла уничтожило '+(tmp)+' пост в блог и увеличило уровень спама на '+Math.ceil(iteration/3)+'.';ressource['smeh']-=tmp;},
-schreiber: function(){var tmp=ressource['scientist']-safe_plus(ressource['scientist'], -Math.ceil(iteration/3)); ressource['govno']+=iteration*3; news.value +='\nПользователи, науськанные seopult истребили '+(tmp)+' разработчиков и оставили после себя '+iteration*3+ 'Пб данных.'; ressource['scientist']-=tmp;reduce('scientist');},
-alksnis: function(){var tmp=ressource['robot']-safe_plus(ressource['robot'], -Math.ceil(iteration/3)); news.value +='\n'+(tmp)+' сотрудников антиспама уволилось в результате деятельности mail.ru.'; ressource['robot']-=tmp;reduce('robot');},
-holmogor: function(){var tmp=ressource['metan']-safe_plus(ressource['metan'], -Math.ceil(iteration)); var tmp1=ressource['bydlo']-safe_plus(ressource['bydlo'], -Math.ceil(iteration)); news.value +='\n Было потеряно'+tmp+'M$ денег, ушло '+tmp1+' пользователей.'; ressource['metan']-=tmp;ressource['bydlo']-=tmp;}
+warrax: function(){var tmp =ressource['unhuman']-safe_plus(ressource['unhuman'], -iteration/3); news.value +='\n'+tmp +' РјРµРЅРµРґР¶РµСЂРѕРІ СѓРІРѕР»РёР»РѕСЃСЊ Рё СЃС‚Р°Р»Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРјРё РїРѕРґ РІРїРµС‡Р°С‚Р»РµРЅРёРµРј РѕС‚ РѕС‡РµСЂРµРґРЅРѕРіРѕ Р·Р°РєРѕРЅРѕРїСЂРѕРµРєС‚Р° РґРµРїСѓС‚Р°С‚Р° РњРёР·СѓР»РёРЅРѕР№".'; ressource['bydlo']+=tmp;  ressource['unhuman']-=tmp; reduce('unhuman');},
+kuraev:function(){ressource['priest']=safe_plus(ressource['priest'], iteration/3); ressource['humanist']=safe_plus(ressource['humanist'], iteration/3);news.value +='\nРўР»РµС‚РІРѕСЂРЅРѕРµ РІР»РёСЏРЅРёРµ РђС€РјР°РЅРѕРІР° СѓРІРµР»РёС‡РёР»Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРѕС€РЅРёРєРѕРІ Рё СЃР»РёРІР°С‚РµР»РµР№ РЅР° '+Math.ceil(iteration/3);},
+kirill: function(){var tmp=ressource['smeh']-safe_plus(ressource['smeh'], -iteration/3); ressource['religion']+=Math.ceil(iteration/3); news.value +='\nРўР»РµС‚РІРѕСЂРЅРѕРµ РІР»РёСЏРЅРёРµ РѕС‚С†Р° РљРёСЂРёР»Р»Р° СѓРЅРёС‡С‚РѕР¶РёР»Рѕ '+(tmp)+' РїРѕСЃС‚ РІ Р±Р»РѕРі Рё СѓРІРµР»РёС‡РёР»Рѕ СѓСЂРѕРІРµРЅСЊ СЃРїР°РјР° РЅР° '+Math.ceil(iteration/3)+'.';ressource['smeh']-=tmp;},
+schreiber: function(){var tmp=ressource['scientist']-safe_plus(ressource['scientist'], -Math.ceil(iteration/3)); ressource['govno']+=iteration*3; news.value +='\nРџРѕР»СЊР·РѕРІР°С‚РµР»Рё, РЅР°СѓСЃСЊРєР°РЅРЅС‹Рµ seopult РёСЃС‚СЂРµР±РёР»Рё '+(tmp)+' СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ Рё РѕСЃС‚Р°РІРёР»Рё РїРѕСЃР»Рµ СЃРµР±СЏ '+iteration*3+ 'РџР± РґР°РЅРЅС‹С….'; ressource['scientist']-=tmp;reduce('scientist');},
+alksnis: function(){var tmp=ressource['robot']-safe_plus(ressource['robot'], -Math.ceil(iteration/3)); news.value +='\n'+(tmp)+' СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Р°РЅС‚РёСЃРїР°РјР° СѓРІРѕР»РёР»РѕСЃСЊ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚Рё mail.ru.'; ressource['robot']-=tmp;reduce('robot');},
+holmogor: function(){var tmp=ressource['metan']-safe_plus(ressource['metan'], -Math.ceil(iteration)); var tmp1=ressource['bydlo']-safe_plus(ressource['bydlo'], -Math.ceil(iteration)); news.value +='\n Р‘С‹Р»Рѕ РїРѕС‚РµСЂСЏРЅРѕ'+tmp+'M$ РґРµРЅРµРі, СѓС€Р»Рѕ '+tmp1+' РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.'; ressource['metan']-=tmp;ressource['bydlo']-=tmp;}
 }
 
 var bonus={
-warrax: function(){news.value +='\n В результате победы над Мизулиной было нанято '+Math.ceil(iteration/5)+' менеджеров.'; ressource['unhuman']+=Math.ceil(iteration/5);},
-kuraev:function(){news.value +='\n В результате победы над Ашмановым было написано '+Math.ceil(iteration/3)+' постов в блог.'; ressource['smeh']+=Math.ceil(iteration/3);},
-kirill: function(){news.value +='\n В результате победы над отцом Кириллом было написано '+Math.ceil(iteration/3)+' постов в блог.'; ressource['smeh']+=Math.ceil(iteration/3);},
-schreiber: function(){news.value +='\n В результате победы над seopult было написано '+Math.ceil(iteration/5)+' постов в блог и '+Math.ceil(iteration/5)+'К строк кода.'; ressource['smeh']+=Math.ceil(iteration/5); ressource['matan']+=Math.ceil(iteration/5);},
-alksnis: function(){news.value +='\n В результате победы над Mail.ru было нанято '+Math.ceil(iteration/5)+' сотрудников антиспама.'; ressource['robot']+=Math.ceil(iteration/5);},
-holmogor: function(){news.value +='\n В результате победы над Сергеем Брином было заработано '+Math.ceil(iteration/3)+'M$ денег.'; ressource['metan']+=Math.ceil(iteration/3);}
+warrax: function(){news.value +='\n Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР±РµРґС‹ РЅР°Рґ РњРёР·СѓР»РёРЅРѕР№ Р±С‹Р»Рѕ РЅР°РЅСЏС‚Рѕ '+Math.ceil(iteration/5)+' РјРµРЅРµРґР¶РµСЂРѕРІ.'; ressource['unhuman']+=Math.ceil(iteration/5);},
+kuraev:function(){news.value +='\n Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР±РµРґС‹ РЅР°Рґ РђС€РјР°РЅРѕРІС‹Рј Р±С‹Р»Рѕ РЅР°РїРёСЃР°РЅРѕ '+Math.ceil(iteration/3)+' РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі.'; ressource['smeh']+=Math.ceil(iteration/3);},
+kirill: function(){news.value +='\n Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР±РµРґС‹ РЅР°Рґ РѕС‚С†РѕРј РљРёСЂРёР»Р»РѕРј Р±С‹Р»Рѕ РЅР°РїРёСЃР°РЅРѕ '+Math.ceil(iteration/3)+' РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі.'; ressource['smeh']+=Math.ceil(iteration/3);},
+schreiber: function(){news.value +='\n Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР±РµРґС‹ РЅР°Рґ seopult Р±С‹Р»Рѕ РЅР°РїРёСЃР°РЅРѕ '+Math.ceil(iteration/5)+' РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі Рё '+Math.ceil(iteration/5)+'Рљ СЃС‚СЂРѕРє РєРѕРґР°.'; ressource['smeh']+=Math.ceil(iteration/5); ressource['matan']+=Math.ceil(iteration/5);},
+alksnis: function(){news.value +='\n Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР±РµРґС‹ РЅР°Рґ Mail.ru Р±С‹Р»Рѕ РЅР°РЅСЏС‚Рѕ '+Math.ceil(iteration/5)+' СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Р°РЅС‚РёСЃРїР°РјР°.'; ressource['robot']+=Math.ceil(iteration/5);},
+holmogor: function(){news.value +='\n Р’ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР±РµРґС‹ РЅР°Рґ РЎРµСЂРіРµРµРј Р‘СЂРёРЅРѕРј Р±С‹Р»Рѕ Р·Р°СЂР°Р±РѕС‚Р°РЅРѕ '+Math.ceil(iteration/3)+'M$ РґРµРЅРµРі.'; ressource['metan']+=Math.ceil(iteration/3);}
 }
 
 var lost={
-warrax: function(){var tmp =ressource['unhuman']-safe_plus(ressource['unhuman'], -iteration/3); var tmp1 =ressource['smeh']-safe_plus(ressource['smeh'], -iteration/3);  news.value +='\n'+tmp +' менеджеров уволилось и стало пользователями под впечатлением от очередного законопроекта Мизулиной '+tmp1+' постов в блог уничтожено.' ; ressource['bydlo']+=tmp;  ressource['unhuman']-=tmp;  ressource['smeh']-=tmp1; reduce('unhuman');},
-kuraev:function(){ressource['priest']=safe_plus(ressource['priest'], iteration/3); ressource['govno']=safe_plus(ressource['govno'], iteration*2); ressource['humanist']=safe_plus(ressource['humanist'], iteration/3);news.value +='\nТлетворное влияние Ашманова увеличило количество сеошников и сливателей на '+Math.ceil(iteration/3)+', сгенерировано ' + iteration*2+ 'Пб данных.';},
-kirill: function(){var tmp1=ressource['scientist']-safe_plus(ressource['scientist'], -iteration/3); var tmp=ressource['smeh']-safe_plus(ressource['smeh'], -iteration/3); ressource['religion']+=Math.ceil(iteration/3); news.value +='\nТлетворное влияние отца Кирилла уничтожило '+(tmp)+' постов в блог и повысилов уровень спама на '+Math.ceil(iteration/3)+'. '+tmp1+' разработчиков уволилось.';ressource['smeh']-=tmp; ressource['scientist']-=tmp1; reduce('scientist');},
-schreiber: function(){var tmp=ressource['scientist']-safe_plus(ressource['scientist'], -Math.ceil(iteration/3)); var tmp1=ressource['matan']-safe_plus(ressource['matan'], -Math.ceil(iteration/3)); ressource['govno']+=iteration*3; news.value +='\nПользователи, науськанные Машой Шрайбер истребили '+(tmp)+' разработчиков и оставили после себя '+iteration*3+ 'Пб данных. '+tmp1+'К строк кода уничтожено.'; ressource['scientist']-=tmp; ressource['matan']-=tmp1; reduce('scientist');},
-alksnis: function(){var tmp=ressource['robot']-safe_plus(ressource['robot'], -Math.ceil(iteration/3)); var tmp1=ressource['matan']-safe_plus(ressource['matan'], -Math.ceil(iteration/3)); news.value +='\n'+(tmp)+' сотрудников антиспама уволилось в результате агирации Mail.ru, ' +tmp1+ 'K строк кода уничтожено.'; ressource['robot']-=tmp;ressource['matan']-=tmp1;reduce('robot');},
-holmogor: function(){var tmp=ressource['metan']-safe_plus(ressource['metan'], -Math.ceil(iteration)); var tmp1=ressource['bydlo']-safe_plus(ressource['bydlo'], -Math.ceil(iteration)); news.value +='\n Было потеряно'+tmp+'$M денег, ушло '+tmp1+' gjkmpjdfntktq, произведено '+iteration+' смапа.'; ressource['metan']-=tmp;ressource['bydlo']-=tmp;ressource['religion']+=iteration;}
+warrax: function(){var tmp =ressource['unhuman']-safe_plus(ressource['unhuman'], -iteration/3); var tmp1 =ressource['smeh']-safe_plus(ressource['smeh'], -iteration/3);  news.value +='\n'+tmp +' РјРµРЅРµРґР¶РµСЂРѕРІ СѓРІРѕР»РёР»РѕСЃСЊ Рё СЃС‚Р°Р»Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРјРё РїРѕРґ РІРїРµС‡Р°С‚Р»РµРЅРёРµРј РѕС‚ РѕС‡РµСЂРµРґРЅРѕРіРѕ Р·Р°РєРѕРЅРѕРїСЂРѕРµРєС‚Р° РњРёР·СѓР»РёРЅРѕР№ '+tmp1+' РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі СѓРЅРёС‡С‚РѕР¶РµРЅРѕ.' ; ressource['bydlo']+=tmp;  ressource['unhuman']-=tmp;  ressource['smeh']-=tmp1; reduce('unhuman');},
+kuraev:function(){ressource['priest']=safe_plus(ressource['priest'], iteration/3); ressource['govno']=safe_plus(ressource['govno'], iteration*2); ressource['humanist']=safe_plus(ressource['humanist'], iteration/3);news.value +='\nРўР»РµС‚РІРѕСЂРЅРѕРµ РІР»РёСЏРЅРёРµ РђС€РјР°РЅРѕРІР° СѓРІРµР»РёС‡РёР»Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРѕС€РЅРёРєРѕРІ Рё СЃР»РёРІР°С‚РµР»РµР№ РЅР° '+Math.ceil(iteration/3)+', СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРѕ ' + iteration*2+ 'РџР± РґР°РЅРЅС‹С….';},
+kirill: function(){var tmp1=ressource['scientist']-safe_plus(ressource['scientist'], -iteration/3); var tmp=ressource['smeh']-safe_plus(ressource['smeh'], -iteration/3); ressource['religion']+=Math.ceil(iteration/3); news.value +='\nРўР»РµС‚РІРѕСЂРЅРѕРµ РІР»РёСЏРЅРёРµ РѕС‚С†Р° РљРёСЂРёР»Р»Р° СѓРЅРёС‡С‚РѕР¶РёР»Рѕ '+(tmp)+' РїРѕСЃС‚РѕРІ РІ Р±Р»РѕРі Рё РїРѕРІС‹СЃРёР»РѕРІ СѓСЂРѕРІРµРЅСЊ СЃРїР°РјР° РЅР° '+Math.ceil(iteration/3)+'. '+tmp1+' СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ СѓРІРѕР»РёР»РѕСЃСЊ.';ressource['smeh']-=tmp; ressource['scientist']-=tmp1; reduce('scientist');},
+schreiber: function(){var tmp=ressource['scientist']-safe_plus(ressource['scientist'], -Math.ceil(iteration/3)); var tmp1=ressource['matan']-safe_plus(ressource['matan'], -Math.ceil(iteration/3)); ressource['govno']+=iteration*3; news.value +='\nРџРѕР»СЊР·РѕРІР°С‚РµР»Рё, РЅР°СѓСЃСЊРєР°РЅРЅС‹Рµ РњР°С€РѕР№ РЁСЂР°Р№Р±РµСЂ РёСЃС‚СЂРµР±РёР»Рё '+(tmp)+' СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ Рё РѕСЃС‚Р°РІРёР»Рё РїРѕСЃР»Рµ СЃРµР±СЏ '+iteration*3+ 'РџР± РґР°РЅРЅС‹С…. '+tmp1+'Рљ СЃС‚СЂРѕРє РєРѕРґР° СѓРЅРёС‡С‚РѕР¶РµРЅРѕ.'; ressource['scientist']-=tmp; ressource['matan']-=tmp1; reduce('scientist');},
+alksnis: function(){var tmp=ressource['robot']-safe_plus(ressource['robot'], -Math.ceil(iteration/3)); var tmp1=ressource['matan']-safe_plus(ressource['matan'], -Math.ceil(iteration/3)); news.value +='\n'+(tmp)+' СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ Р°РЅС‚РёСЃРїР°РјР° СѓРІРѕР»РёР»РѕСЃСЊ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р°РіРёСЂР°С†РёРё Mail.ru, ' +tmp1+ 'K СЃС‚СЂРѕРє РєРѕРґР° СѓРЅРёС‡С‚РѕР¶РµРЅРѕ.'; ressource['robot']-=tmp;ressource['matan']-=tmp1;reduce('robot');},
+holmogor: function(){var tmp=ressource['metan']-safe_plus(ressource['metan'], -Math.ceil(iteration)); var tmp1=ressource['bydlo']-safe_plus(ressource['bydlo'], -Math.ceil(iteration)); news.value +='\n Р‘С‹Р»Рѕ РїРѕС‚РµСЂСЏРЅРѕ'+tmp+'$M РґРµРЅРµРі, СѓС€Р»Рѕ '+tmp1+' gjkmpjdfntktq, РїСЂРѕРёР·РІРµРґРµРЅРѕ '+iteration+' СЃРјР°РїР°.'; ressource['metan']-=tmp;ressource['bydlo']-=tmp;ressource['religion']+=iteration;}
 }
 
 var close_but;
@@ -68,7 +68,7 @@ if (rt)
 pause=true;
 mess_window.style.display="block";
 messagetxt.innerHTML=events[event_names[ev]];
-messagetxt.innerHTML+="<br><br><span style='font-size:12px;'>Помните, что проиграв бой, вы претерпите большый урон, чем избегнув его. Выигранная битва, в свою очередь, сулит определенные бонусы. <br></span>"
+messagetxt.innerHTML+="<br><br><span style='font-size:12px;'>РџРѕРјРЅРёС‚Рµ, С‡С‚Рѕ РїСЂРѕРёРіСЂР°РІ Р±РѕР№, РІС‹ РїСЂРµС‚РµСЂРїРёС‚Рµ Р±РѕР»СЊС€С‹Р№ СѓСЂРѕРЅ, С‡РµРј РёР·Р±РµРіРЅСѓРІ РµРіРѕ. Р’С‹РёРіСЂР°РЅРЅР°СЏ Р±РёС‚РІР°, РІ СЃРІРѕСЋ РѕС‡РµСЂРµРґСЊ, СЃСѓР»РёС‚ РѕРїСЂРµРґРµР»РµРЅРЅС‹Рµ Р±РѕРЅСѓСЃС‹. <br></span>"
 messagebtn.style.visibility="visible";
 close_but.style.visibility="hidden";
 }
@@ -77,7 +77,7 @@ close_but.style.visibility="hidden";
 
 function ignore_proc()
 {
-messagetxt.innerHTML="Вы отказались от боя.";
+messagetxt.innerHTML="Р’С‹ РѕС‚РєР°Р·Р°Р»РёСЃСЊ РѕС‚ Р±РѕСЏ.";
 close_but.style.visibility="visible";
 action[event_names[ev]]();
 messagebtn.style.visibility="hidden";
@@ -86,18 +86,18 @@ messagebtn.style.visibility="hidden";
 
 function fight_proc()
 {
-messagetxt.innerHTML="Вы приняли битву...<br>";
+messagetxt.innerHTML="Р’С‹ РїСЂРёРЅСЏР»Рё Р±РёС‚РІСѓ...<br>";
 close_but.style.visibility="visible";
 
 if ((ressource['priest']+ressource['humanist'])*Math.random()<(ressource['robot']+ressource['unhuman'])*Math.random())
 {
-messagetxt.innerHTML+="<br>...и одержали победу!";
+messagetxt.innerHTML+="<br>...Рё РѕРґРµСЂР¶Р°Р»Рё РїРѕР±РµРґСѓ!";
 
 bonus[event_names[ev]]();
 }
 else
 {
-messagetxt.innerHTML+="<br>...и потерпели поражение.";
+messagetxt.innerHTML+="<br>...Рё РїРѕС‚РµСЂРїРµР»Рё РїРѕСЂР°Р¶РµРЅРёРµ.";
 
 lost[event_names[ev]]();
 
